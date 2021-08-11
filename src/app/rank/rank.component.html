@@ -2,7 +2,7 @@
   <div class="rank">{{record.rank}}</div>
   <igx-avatar initials="{{record.first.substring(0, 1)}}{{record.last.substring(0,1)}}"
               [roundShape]="true"
-              size="medium" [ngStyle]="{'background':getRandomColor()}">
+              size="medium" [ngStyle]="{'background':getRandomColor()}" matTooltip="{{record.first}} {{record.last}}">
   </igx-avatar>
   <div class="calories">
     <div class="titlecal">{{record.avgcalories}}Cal</div>

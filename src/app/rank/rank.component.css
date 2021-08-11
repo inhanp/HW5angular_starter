@@ -3,6 +3,7 @@
   max-width: 100%;
   max-height: 100px;
   grid-template-columns: 15% 15% 34% 2% 34%;
+  margin-bottom: 5px;
 }
 .igx-avatar {
   color: #000000;
