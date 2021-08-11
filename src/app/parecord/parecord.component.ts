@@ -23,6 +23,7 @@ export class ParecordComponent implements OnInit {
 
 
    color = 'primary';
+   warn = 'warn';
 
    activity = this.activities[0];
    calprogressvalue = 0;
