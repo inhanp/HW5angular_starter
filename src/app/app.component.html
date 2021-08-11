@@ -1,4 +1,8 @@
 <mat-toolbar *ngIf="isUser">
+  <igx-avatar initials="{{currentUser.firstName.substring(0, 1)}}{{currentUser.lastName.substring(0,1)}}"
+              [roundShape]="true"
+              size="small">
+  </igx-avatar>
   <button mat-button routerLink="/">My Progress</button>
 
   <button mat-button routerLink="/admin" *ngIf="isAdmin">Rankings</button>

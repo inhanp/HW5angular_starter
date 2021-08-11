@@ -21,7 +21,6 @@ export class AdminComponent implements OnInit {
     this.userService.getAll().pipe(first()).subscribe(users => {
       users.forEach(user => {
         this.recordService.getAverage(user.username).pipe(first()).subscribe(record => {
-          console.log(record);
           this.records.push(record);
           // sort method
           this.records.sort((a, b) => {

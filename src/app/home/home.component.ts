@@ -33,7 +33,6 @@ export class HomeComponent implements OnInit {
 
 
   private loadAllPArecords() {
-    console.log('loadAllParecords()');
     this.parecordservice.getAll().subscribe(
          parecords => {
            this.parecords = parecords;

@@ -18,6 +18,7 @@ export class AppComponent {
                 private authService: AuthService
                 ) {
     this.authService.currentUser.subscribe(x => this.currentUser = x);
+    console.log(this.currentUser);
   }
 
   get isAdmin() {
