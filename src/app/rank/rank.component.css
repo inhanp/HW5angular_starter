@@ -1,9 +1,16 @@
 .rank-card {
   display: grid;
   max-width: 100%;
+  max-height: 100px;
   grid-template-columns: 15% 15% 34% 2% 34%;
 }
 .igx-avatar {
-  background: #e41c77;
   color: #000000;
+}
+.rank {
+  height: 50px;
+  line-height: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  vertical-align: middle;
 }
