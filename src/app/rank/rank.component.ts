@@ -11,8 +11,6 @@ export class RankComponent implements OnInit {
   name: string;
   first: string;
   last: string;
-  avgcalories: number;
-  avgminutes: number;
   calrate: number;
   minuterate: number;
   accentColor: ThemePalette = 'accent';

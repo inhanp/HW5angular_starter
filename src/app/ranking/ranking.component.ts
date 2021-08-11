@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
-
 import { User } from '../_models/user';
 import { UserService } from '../_services/user.service';
 import {PArecordService} from '../_services/parecord.service';
 
-@Component({ templateUrl: 'admin.component.html' })
-export class AdminComponent implements OnInit {
+@Component({
+  selector: 'app-ranking',
+  templateUrl: './ranking.component.html',
+  styleUrls: ['./ranking.component.css']
+})
+export class RankingComponent implements OnInit {
   users: User[] = [];
   records = [];
   avgcalories: number;
@@ -25,7 +28,7 @@ export class AdminComponent implements OnInit {
           // sort method
           this.records.sort((a, b) => {
             return b.avgminutes - a.avgminutes;
-           });
+          });
           this.records.forEach( (value) => {
             value.rank = this.records.indexOf(value) + 1;
           });
@@ -33,4 +36,5 @@ export class AdminComponent implements OnInit {
       });
     });
   }
+
 }

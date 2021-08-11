@@ -10,7 +10,6 @@ import { MaterialModule } from './material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ParecordComponent } from './parecord/parecord.component';
-import { AdminComponent } from './admin/admin.component';
 import { RegisterComponent } from './register/register.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
@@ -19,6 +18,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { EditComponent } from './edit/edit.component';
 import { RankComponent } from './rank/rank.component';
 import { IgxAvatarModule } from 'igniteui-angular';
+import { RankingComponent } from './ranking/ranking.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +27,11 @@ import { IgxAvatarModule } from 'igniteui-angular';
     HomeComponent,
 
     ParecordComponent,
-    AdminComponent,
     RegisterComponent,
     SettingsComponent,
     EditComponent,
-    RankComponent
+    RankComponent,
+    RankingComponent
   ],
   imports: [
     BrowserModule,
