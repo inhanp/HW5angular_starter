@@ -5,11 +5,11 @@ import {NotificationService} from '../_services/notification.service';
 import {first} from 'rxjs/operators';
 
 @Component({
-  selector: 'app-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  selector: 'app-add',
+  templateUrl: './add.component.html',
+  styleUrls: ['./add.component.css']
 })
-export class EditComponent implements OnInit {
+export class AddComponent implements OnInit {
   exerciseType: string;
   date: Date;
   calories: number;
@@ -54,5 +54,4 @@ export class EditComponent implements OnInit {
       this.notif.showNotif('Recorded!', 'confirmation');
     });
   }
-
 }

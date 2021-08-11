@@ -19,6 +19,7 @@ import { EditComponent } from './edit/edit.component';
 import { RankComponent } from './rank/rank.component';
 import { IgxAvatarModule } from 'igniteui-angular';
 import { RankingComponent } from './ranking/ranking.component';
+import { AddComponent } from './add/add.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RankingComponent } from './ranking/ranking.component';
     SettingsComponent,
     EditComponent,
     RankComponent,
-    RankingComponent
+    RankingComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
