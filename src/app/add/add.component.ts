@@ -14,7 +14,6 @@ export class AddComponent implements OnInit {
   date: Date;
   calories: number;
   minutes: number;
-  dateDisabled = false;
 
   constructor(private route: ActivatedRoute,
               private paService: PArecordService,
@@ -22,10 +21,6 @@ export class AddComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      if (params.get('date') !== null) {
-        this.date = new Date(params.get('date'));
-        this.dateDisabled = true;
-      }
       this.calories = Number(params.get('calories'));
       this.minutes = Number(params.get('minutes'));
       this.exerciseType = params.get('type');

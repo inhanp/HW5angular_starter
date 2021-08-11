@@ -14,7 +14,6 @@ export class EditComponent implements OnInit {
   date: Date;
   calories: number;
   minutes: number;
-  dateDisabled = false;
 
   constructor(private route: ActivatedRoute,
               private paService: PArecordService,
@@ -22,10 +21,7 @@ export class EditComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      if (params.get('date') !== null) {
-        this.date = new Date(params.get('date'));
-        this.dateDisabled = true;
-      }
+      this.date = new Date(params.get('date'));
       this.calories = Number(params.get('calories'));
       this.minutes = Number(params.get('minutes'));
       this.exerciseType = params.get('type');
@@ -51,7 +47,7 @@ export class EditComponent implements OnInit {
   }
   submit() {
     this.paService.edit(Number(this.exerciseType), this.date, this.minutes, this.calories).pipe(first()).subscribe(result => {
-      this.notif.showNotif('Recorded!', 'confirmation');
+      this.notif.showNotif('Update saved', 'confirmation');
     });
   }
 
