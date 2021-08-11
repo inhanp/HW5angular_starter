@@ -15,6 +15,11 @@ export class PArecordService {
       return this.http.get<PARecord[]>(`http://localhost:3030/parecord/getparecords`);
   }
 
+  add(type: number, date: Date, minutes: number, calories: number) {
+    const parecord = {type, date, minutes, calories};
+    return this.http.post(`http://localhost:3030/parecord/addparecord`, parecord);
+  }
+
   edit(type: number, date: Date, minutes: number, calories: number) {
     const parecord = {type, date, minutes, calories};
     return this.http.post(`http://localhost:3030/parecord/editparecord`, parecord);

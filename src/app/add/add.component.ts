@@ -45,7 +45,7 @@ export class AddComponent implements OnInit {
     return this.minutes;
   }
   submit() {
-    this.paService.edit(Number(this.exerciseType), this.date, this.minutes, this.calories).pipe(first()).subscribe(result => {
+    this.paService.add(Number(this.exerciseType), this.date, this.minutes, this.calories).pipe(first()).subscribe(result => {
       this.notif.showNotif('Recorded!', 'confirmation');
     });
   }
